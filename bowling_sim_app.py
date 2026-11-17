@@ -715,11 +715,6 @@ kpi1.metric(
     f"{flare_potential_inch:.2f}\" ({min(100.0, activation_pct):.0f}%)",
     f"총 {total_revolutions:.1f}회전 주행"
 )
-kpi2.metric(
-    "스키드(Skid) → 훅(Hook) → 롤(Roll)",
-    f"0~{skid_end_ft:.0f}ft / {skid_end_ft:.0f}~{roll_start_ft:.0f}ft / {roll_start_ft:.0f}~60ft",
-    f"브레이크 포인트: {max_right_board:.1f}번 ({breakpoint_ft:.1f}ft)" if breakpoint_ft else "-"
-)
 kpi3.metric("핀 데크 입사 보드", f"{traj_x[-1]:.1f}번 보드", "1번 핀(포켓: 17.5번)")
 kpi4.metric(
     f"트랙 판정: {track_category}",
